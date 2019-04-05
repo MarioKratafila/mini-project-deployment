@@ -4,9 +4,15 @@
     {
       "name": "frontend",
       "image": "kratafila/mini-frontend",
-      "hostname": "frontend",
       "essential": true,
-      "memory": 128
+      "memory": 128,
+      "portMappings": [
+        {
+        "hostPort": 80,
+        "containerPort":80
+        }
+      ],
+      "links": ["backend"]
     },
     {
       "name": "backend",
