@@ -7,14 +7,26 @@
       "hostname": "frontend",
       "essential": false,
       "memory": 128,
-      "links": ["backend"]
+      "links": ["backend"],
+      "portMappings": [
+        {
+          "hostPort": 4200,
+          "containerPort": 4200
+        }
+      ]
     },
     {
       "name": "backend",
       "image": "kratafila/mini-backend",
       "hostname": "backend",
       "essential": false,
-      "memory": 300 
+      "memory": 300,
+      "portMappings": [
+        {
+          "hostPort": 8080,
+          "containerPort": 8080
+        }
+      ]
     },
     {
       "name": "nginx",
