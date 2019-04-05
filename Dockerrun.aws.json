@@ -1,0 +1,19 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "frontend",
+      "image": "kratafila/mini-frontend",
+      "hostname": "frontend",
+      "essential": true,
+      "memory": 128
+    },
+    {
+      "name": "backend",
+      "image": "kratafila/mini-backend",
+      "hostname": "backend",
+      "essential": true,
+      "memory": 128
+    }
+  ]
+}
