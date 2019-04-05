@@ -4,22 +4,29 @@
     {
       "name": "frontend",
       "image": "kratafila/mini-frontend",
-      "essential": true,
-      "memory": 200,
-      "portMappings": [
-        {
-        "hostPort": 80,
-        "containerPort":80
-        }
-      ],
+      "essential": false,
+      "memory": 128,
       "links": ["backend"]
     },
     {
       "name": "backend",
       "image": "kratafila/mini-backend",
       "hostname": "backend",
+      "essential": false,
+      "memory": 128
+    },
+    {
+      "name": "nginx",
+      "image": "kratafila/mini-nginx",
       "essential": true,
-      "memory": 500
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["frontend", "backend"],
+      "memory": 128
     }
   ]
 }
