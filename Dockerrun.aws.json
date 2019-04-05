@@ -14,7 +14,13 @@
       "image": "kratafila/mini-backend",
       "hostname": "backend",
       "essential": false,
-      "memory": 128
+      "memory": 300,
+      "portMappings": [
+        {
+          "hostPort": 8080,
+          "containerPort": 8080
+        }
+      ] 
     },
     {
       "name": "nginx",
