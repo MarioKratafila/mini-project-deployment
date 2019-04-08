@@ -10,8 +10,8 @@
       "links": ["backend"],
       "portMappings": [
         {
-          "hostPort": 4200,
-          "containerPort": 4200
+          "hostPort": 80,
+          "containerPort": 80
         }
       ]
     },
@@ -27,19 +27,6 @@
           "containerPort": 8080
         }
       ]
-    },
-    {
-      "name": "nginx",
-      "image": "kratafila/mini-nginx",
-      "essential": true,
-      "portMappings": [
-        {
-          "hostPort": 80,
-          "containerPort": 80
-        }
-      ],
-      "links": ["frontend"],
-      "memory": 128
     }
   ]
 }
