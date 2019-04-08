@@ -19,7 +19,7 @@
       "name": "backend",
       "image": "kratafila/mini-backend",
       "hostname": "backend",
-      "essential": false,
+      "essential": true,
       "memory": 300,
       "portMappings": [
         {
